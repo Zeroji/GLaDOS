@@ -29,10 +29,5 @@
     "desc": "The oldest of all bots, the goodest bot",
     "prefix": [";"],
     "hosted": true
-  },
-  "324667358838915072": {
-    "desc": [{"w": 1, "s": "very text"}, {"w": 1, "s": "much {desc|wow}"}],
-    "prefix": ["mc", ":icecream:"],
-    "hosted": true
   }
 }
