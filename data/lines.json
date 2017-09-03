@@ -1,0 +1,40 @@
+{
+  "welcome": [
+    {"w": 8, "s": "{user_mention} Welcome to {server}!"},
+    {"w": 1, "s": "Hello {user_mention}, and again, welcome to the Aperture Science comp-- [bzzzzt] to {server}."},
+    {"w": 1, "s": "Welcome to the {server} computer-aided enrichment center, {user_mention}"}
+  ],
+  "welcome-verification-medium": [
+    {"w": 5, "s": "Unfortunately, your Discord account has been created too recently for this server. Please wait {time} before you can post. Sorry for the inconvenience!"}
+  ],
+  "welcome-verification-high": [
+    {"w": 9, "s": "Due to moderation settings, you will have to wait {time} before you can start posting. We apologize for the inconvenience."},
+    {"w": 1, "s": "Sadly, this server is run by control freaks who will require you to wait {time} to start existing. Yeah, that sucks."}
+  ],
+  "welcome-verification-account": "(on a side note, you need a verified Discord account)",
+  "greeting": [
+    {"w": 3, "s": "Hello {user}"},
+    {"w": 2, "s": "Hi {user}!"},
+    {"w": 1, "s": "Hi {user} :wave:"}
+  ],
+  "unknown": [
+    {"w": 6, "s": "Sorry, I'm not advanced enough to understand that"},
+    {"w": 2, "s": "I didn't quite catch that"},
+    {"w": 1, "s": "Did you mean-- [bzzzzt]"},
+    {"w": 1, "s": ":potato:"}
+  ],
+  "about-self": [
+    {"w": 5, "s": "I'm {client}, the most {friendly|human-like} bot {of|on} {the|this} server, and I'm here to {||~~test~~ }guide you!"}
+  ],
+  "about-welcome": "{Feel free to|Just} ask me if you need {|to know |help }anything{.|!}",
+  "about-help": "Just {ask|ask|call} me if you need {|to know }anything{,|.|!} I can tell you about the {different|various} channels{ here||}, about our server{,| and} its community, and even about the other bots{!| that are here.}",
+  "channels-list": [
+    {"w": 6, "s": "Alright, here's {a list of|some} channels {that you might like|you might find interesting}. If you {want to|wanna} know more {on|about} a {particular|specific} one, ask me, or click on it and read {the|its} topic{| (at the top)}."},
+    {"w": 1, "s": "Here's a list of the different ~~test chambers~~ text channels of this ~~facility~~ server"}
+  ],
+  "bot-hosted": [
+    {"w": 5, "s": "We're hosting {bot_list} on our own server, which means we {~~have established domination over~~ |}control them."},
+    {"w": 2, "s": "{bot_list} are our personal test subjects.{| They've been through {quite |}a lot.} {Don't|Do not} feed{ after midnight|}."}
+  ]
+
+}

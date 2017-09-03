@@ -1,0 +1,38 @@
+{
+  "292721467496595456":
+  {
+    "desc": "Nadeko is like superman just not vulnerable to that one metal that can beat superman",
+    "prefix": ["-", "~", "."],
+    "hosted": true
+  },
+  "290121484909674497": {
+    "desc": "Our very own bot programmed by the most ~~(not so)~~ awesome guy to walk this planet, {Not |}Tom",
+    "prefix": ["+"],
+    "hosted": true
+  },
+  "172002275412279296": {
+    "desc": "A lot of useful features, including many social and chatting integrations",
+    "prefix": ["t!"],
+    "hosted": false
+  },
+  "184405311681986560": {
+    "desc": "Our primary music bot, it does its job well with the occasional bug.",
+    "prefix": [";;"],
+    "hosted": false
+  },
+  "211969131832934400": {
+    "desc": "Another bot programmed by our very own (not so) awesome guy, {Not |}Tom",
+    "prefix": ["!"],
+    "hosted": true
+  },
+  "134591956796833792": {
+    "desc": "The oldest of all bots, the goodest bot",
+    "prefix": [";"],
+    "hosted": true
+  },
+  "324667358838915072": {
+    "desc": [{"w": 1, "s": "very text"}, {"w": 1, "s": "much {desc|wow}"}],
+    "prefix": ["mc", ":icecream:"],
+    "hosted": true
+  }
+}

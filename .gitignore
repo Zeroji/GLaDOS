@@ -1,0 +1,7 @@
+# Environment
+.python-version
+.idea/
+__pycache__/
+
+# Private data
+data/secret/

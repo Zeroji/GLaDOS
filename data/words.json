@@ -1,0 +1,10 @@
+{
+  "name": ["glados", "@glados"],
+  "help": ["help", "halp", "who are you", "what are you"],
+  "greeting": ["hi", "heya", "hello"],
+  "question": ["what", "what's", "who", "who's"],
+  "stop": ["shut up", "stfu", "fuck off", "quiet", "stop", "goodbye", "bye", "not talking"],
+  "tell": ["tell", "tell me", "tell me about", "what about", "tell about", "know about"],
+  "channel": ["chan", "channel", "channels"],
+  "bots": ["bot", "bots"]
+}
