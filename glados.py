@@ -144,4 +144,4 @@ class GlaDOS(discord.Client):
 
 
 if __name__ == '__main__':
-    GlaDOS().run(open('data/token').read().strip())
+    GlaDOS().run(open('data/secret/token').read().strip())
