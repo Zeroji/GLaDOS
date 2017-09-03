@@ -7,6 +7,7 @@ from utils import *
 interaction_cool_down = datetime.timedelta(seconds=120)
 
 
+# noinspection PyUnresolvedReferences
 class GlaDOS(discord.Client):
     def __init__(self, *, loop=None, **options):
         super().__init__(loop=loop, **options)
@@ -132,8 +133,8 @@ class GlaDOS(discord.Client):
                     text += ' (prefix%s: %s)' % ('es' if len(prefixes) > 1 else '', pretty(prefixes, formatting='`%s`'))
             if len(bots) > 0:
                 text += '\n' + format_line('bot-hosted',
-                                           bot_list=pretty([bot.mention for bot in bots
-                                                            if bot is not None and bot.id in B and B.get(bot.id).get('hosted')]))
+                                           bot_list=pretty([bot.mention for bot in bots if bot is not None
+                                                            and bot.id in B and B.get(bot.id).get('hosted')]))
             send(text.strip())
         elif contains('stop'):
             self.inter_block(message)
