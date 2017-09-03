@@ -112,6 +112,8 @@ class GlaDOS(discord.Client):
             if len(channels) == 0 and contains('channel'):
                 text += '\n' + get_line('channels-list')
                 channels = {self.get_channel(cid) for cid in C}
+            channels = list(channels)
+            channels.sort(key=lambda channel: channel.position)
             for chan in channels:
                 if chan is None or chan.id not in C:
                     continue
