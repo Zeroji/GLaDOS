@@ -5,6 +5,7 @@
   "question": ["what", "what's", "who", "who's"],
   "stop": ["shut up", "stfu", "fuck off", "quiet", "stop", "goodbye", "bye", "not talking"],
   "tell": ["tell", "tell me", "tell me about", "what about", "tell about", "know about"],
+  "neurotoxin": ["neurotoxin"],
   "channel": ["chan", "channel", "channels"],
   "bots": ["bot", "bots"]
 }

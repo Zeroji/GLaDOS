@@ -1,10 +1,12 @@
 #!/usr/bin/env python
+import asyncio
 import datetime
 import discord
 from utils import *
 
 
 interaction_cool_down = datetime.timedelta(seconds=120)
+neurotoxin_cool_down = datetime.timedelta(seconds=180)
 
 
 # noinspection PyUnresolvedReferences
@@ -12,6 +14,7 @@ class GlaDOS(discord.Client):
     def __init__(self, *, loop=None, **options):
         super().__init__(loop=loop, **options)
         self.interactions = {}  # CID:{UID:timestamp} mapping of last interactions
+        self.neurotoxin = {}  # CID:timestamp mapping of when to stop
 
     async def on_member_join(self, member: discord.Member):
         server: discord.Server = member.server
@@ -65,11 +68,23 @@ class GlaDOS(discord.Client):
     async def on_message(self, message: discord.Message):
         if message.author.bot:
             return
-        if not self.interact(message):
-            return
 
         def send(*args, **kwargs):  # makes things nicer and a tiny bit faster maybe
+            if len(args) > 0 and isinstance(args[0], str) and len(args[0]) == 0:
+                return
             self.loop.create_task(self.send_message(message.channel, *args, **kwargs))
+
+        if message.channel.id in self.neurotoxin:
+            cid = message.channel.id
+            if message.timestamp > self.neurotoxin.get(cid) + neurotoxin_cool_down:
+                self.neurotoxin.pop(cid)
+                send(get_line("neurotoxin-disabled"))
+            else:
+                self.loop.create_task(delay(random.randint(1, 5), self.delete_message(message)))
+                return
+
+        if not self.interact(message):
+            return
 
         def contains(w_list):
             return contains_list(message.content, w_list)
@@ -136,6 +151,9 @@ class GlaDOS(discord.Client):
                                            bot_list=pretty([bot.mention for bot in bots if bot is not None
                                                             and bot.id in B and B.get(bot.id).get('hosted')]))
             send(text.strip())
+        elif contains('neurotoxin') and ('manage_messages', True) in message.channel.permissions_for(message.author):
+            self.neurotoxin[message.channel.id] = message.timestamp
+            send(get_line("neurotoxin"))
         elif contains('stop'):
             self.inter_block(message)
             return
@@ -145,6 +163,9 @@ class GlaDOS(discord.Client):
             if len(message.content) >= 8:
                 send(format_line('unknown', message))
 
+async def delay(seconds, coro):
+    await asyncio.sleep(seconds)
+    await coro
 
 if __name__ == '__main__':
     GlaDOS().run(open('data/secret/token').read().strip())

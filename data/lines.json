@@ -17,6 +17,17 @@
     {"w": 2, "s": "Hi {user}!"},
     {"w": 1, "s": "Hi {user} :wave:"}
   ],
+  "neurotoxin": [
+    {"w": 3, "s": "Get comfortable while I warm up the neurotoxin emitters."},
+    {"w": 1, "s": "Unfortunately, as much as I'd love to now, I can't get the neurotoxin into your head any faster."},
+    {"w": 2, "s": "It's your old friend, deadly neurotoxin. If I were you, I'd take a deep breath. And hold it."},
+    {"w": 3, "s": "Do hear that? That's the sound of the neurotoxin emitters emitting neurotoxin."}
+  ],
+  "neurotoxin-disabled": [
+    {"w": 2, "s": "Huh. There isn't enough neurotoxin to kill you.{| So I guess you win.}"},
+    {"w": 1, "s": "When I said deadly neurotoxin, the 'deadly' was in massive sarcasm quotes."},
+    {"w": 7, "s": ""}
+  ],
   "unknown": [
     {"w": 6, "s": "Sorry, I'm not advanced enough to understand that"},
     {"w": 2, "s": "I didn't quite catch that"},
